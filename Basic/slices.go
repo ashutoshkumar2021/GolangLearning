@@ -27,4 +27,7 @@ func main() {
 	highScores=append(highScores, 555,666,321) //but when we use append it does not show any error
 
 	fmt.Println(highScores)
+
+	sort.Ints(highScores); //help to sor
+	fmt.Println(highScores);
 }
