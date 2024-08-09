@@ -30,4 +30,6 @@ func main() {
 
 	sort.Ints(highScores); //help to sor
 	fmt.Println(highScores);
+
+        fmt.Println(sort.IntsAreSorted(highScores)) //Return true or false
 }
