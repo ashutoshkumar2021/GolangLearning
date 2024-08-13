@@ -32,4 +32,23 @@ func main() {
 	fmt.Println(highScores);
 
         fmt.Println(sort.IntsAreSorted(highScores)) //Return true or false
+
+	//how to remove a value from slices based on index
+
+	var courses = []string{"ReactJs", "Javascript", "swift", "python", "ruby"}
+	fmt.Println(courses)
+
+	reader := bufio.NewReader(os.Stdin)
+	input, _ := reader.ReadString('\n')
+	index, err := strconv.Atoi(strings.TrimSpace(input))
+
+	if err != nil {
+		fmt.Println("Error:", err)
+	} else if index < 0 || index >= len(courses) {
+		fmt.Println("Index out of range")
+	} else {
+		courses = append(courses[:index], courses[index+1:]...)
+		fmt.Println(courses)
+
+}
 }
